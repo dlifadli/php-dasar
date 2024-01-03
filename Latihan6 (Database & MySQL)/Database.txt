@@ -1,0 +1,20 @@
+Data Base Management System (DBMS) adalah software untuk mengelola database.
+- Oracle
+- MySQL
+- SQL Server
+- PostgreSQL
+- MongoDB
+
+Jenis-jenis Data Base Management System (DBMS)
+- Relational DBMS (RDBMS) adalah database yang saling terhubung satu sama lain.
+- Hierarchical DBMS (HDBMS)
+- Network DBMS
+- NoSQL DBMS adalah tidak menggunakan SQL
+
+Istilah-istilah dalam Database
+- Field / Column
+- Record / Row / Baris
+- Key (Primary Key & Foreign Key)
+- Auto Increment
+- Relationship
+- Normalization

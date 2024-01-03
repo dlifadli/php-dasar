@@ -1,0 +1,73 @@
+Array
+Adalah tipe data yang digunakan untuk mendeskripsikan kumpulan element (nilai atau variabel), yang tiap-tiap elementnya memiliki key.
+
+Kenapa array?
+    - Mempermudah pengelolaan nilai / value / data.
+    - Efektivitas management memori.
+
+Karakteristik array
+    - Variabel jamak, yang mempunyai banyak element dan diacu dengan nama yang sama.
+    - Kumpulan pasangan key dan nilai / key and value pair.
+    - Key adalah index pada array dengan tipe integer yang dimulai dari 0 (Numeric) atau key yang kita bisa buat sendiri (Assosiative).
+    - Element pada array boleh memiliki tipe data yang berbeda.
+
+Tipe Array:
+Array Numeric
+    Adalah array yang keynya berupa index dan isinya angka diawali dari 0.
+Cara Membuat Array Numeric:
+    -Cara Lama:
+        $variabel = array("element", "element", "element");
+        $variabel = array(123, "element", boolean);
+    -Cara Baru:
+        $variabel = ["element", "element", "element"];
+        $variabel = [123, "element", boolean];
+    TIPS:
+        jika elementnya string, gunakan ""
+        tapi jika elementnya integer atau boolean TIDAK perlu menggunakan ""
+Cara Membuat Array Didalam Array
+    Array didalam array bisa menggunakan Array Numeric didalamnya ada Array Assosiative atau Array Numeric didalam Array Numeric.
+    Array Numeric didalamnya ada Array Assosiative:
+        $variabel = [["key1" => "element", "key2" => "6969", "key3" => "boolean"], ["key4" => "element", "key5" => "6969", "key6" => "boolean"]];
+    Array Numeric didalam Array Numeric:
+        $variabel = [["element", 6969, boolean], [boolean, "element", 6969]];
+
+Array Assosiative
+    Adalah array yang keynya berupa string "" dan keynya bebas terserah kita tapi mengharuskan menggunakan string.
+Cara Membuat Array Assosiative
+    -Cara Lama:
+        $variabel = array("key1" => "element", "key2" => 6969, "key3" => boolean);
+    -Cara Baru:
+        $variabel = ["key1" => "element", "key2" => 6969, "key3" => boolean];
+Cara Membuat Array Didalam Array
+    Array didalam array bisa menggunakan Array Assosiative didalamnya ada Array Numeric atau Array Assosiative didalam Array Assosiative.
+    Array Assosiative didalamnya ada Array Numeric:
+        $variabel = ["key1" => [boolean, "element", 6969], "key2" => ["element", 6969, boolean], "key3" => [6969, boolean, "element"]];
+    Array Assosiative didalam Array Assosiative:
+        $variabel = ["key1" => ["key1" => "element", "key2" => 6969, "key3" => boolean], "key2" => ["key1" => boolean, "key2" => "element", "key3" => 6969]];
+
+Cara Menampilkan Array
+    var_dump($variabel);
+    Untuk menampilkan array pada saat debugging.
+    Contoh Penulisan:
+        <?php $hari = ["Senin", "Selasa", "Rabu"]; var_dump($hari)?> //hasilnya array(3) { [0]=> string(5) "Senin" [1]=> string(6) "Selasa" [2]=> string(4) "Rabu" }
+    print_r($variabel);
+        Untuk menampilkan array pada saat debugging.
+        Contoh Penulisan:
+        <?php $bulan = ["Januari", "Februari", "Maret"]; print_r($bulan)?> //hasilnya Array ( [0] => Januari [1] => Februari [2] => Maret )
+    echo $variabel[index];
+        Bisa untuk menampilkan array kepada user.
+        TIPS:
+        Jika ingin menggunakan array dengan cara echo, TIDAK BISA menuliskan lebih dari 1 index.
+        Contoh Penulisan:
+        <?php $campur = [12345666, "huruf", true]; echo $campur[0];?> //hasilnya 12345666
+        <?php $campur = [12345666, "huruf", true]; echo $campur[1];?> //hasilnya huruf
+
+Cara menambahkan element baru pada array
+    $variabel[] = "element"; var_dump($variabel);
+        Contoh Penulisan:
+        <?php $hari = ["Senin", "Selasa", "Rabu"]; $hari[] = "Kamis"; $hari[] = "Jum'at"; var_dump($hari);?> //hasilnya array(5) { [0]=> string(5) "Senin" [1]=> string(6) "Selasa" [2]=> string(4) "Rabu" [3]=> string(5) "Kamis" [4]=> string(6) "Jum'at" }
+
+    $variabel[] = "element"; print_r($variabel);
+        Contoh Penulisan:
+        <?php $hari = ["Senin", "Selasa", "Rabu"]; $hari[] = "Kamis"; $hari[] = "Jum'at"; print_r($hari);?> //hasilnya Array ( [0] => Senin [1] => Selasa [2] => Rabu [3] => Kamis [4] => Jum'at )
+        

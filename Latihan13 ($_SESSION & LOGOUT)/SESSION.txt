@@ -1,0 +1,18 @@
+Session
+Adalah mekanisme penyimpanan informasi ke dalam variabel agar bisa digunakan di LEBIH DARI SATU HALAMAN dan informasi pada $_SESSION[""] disimpan di server.
+
+Cara Pakai
+Untuk mengisi data di dalam $_SESSION[""] harus menjalankan dulu function:
+
+session_start();
+$_SESSION["namaVariabel"] = "Isi Variabel"
+
+Untuk menggunakan $_SESSION[""] di halaman lain, harus jalankan lagi session_start(); di halaman lainnya. 
+
+Perlu diingat, nilai didalam $_SESSION[""] ini akan hilang pada 1 sesi (1 sesi adalah jika browsernya diexit atau komputer lu direstart).
+Dan untuk menggunakan kembali nilai $_SESSION[""] setelah 1 sesi, harus membuka halaman browser yang menyimpan nilai $_SESSION untuk di set kembali nilainya.
+Cara manual untuk mematikan $_SESSION[""] tanpa harus melewati 1 sesi adalah dengan menambahkan script:
+
+session_start();
+$_SESSION["NamaVariabel"] = "Isi Variabel"
+session_destroy();

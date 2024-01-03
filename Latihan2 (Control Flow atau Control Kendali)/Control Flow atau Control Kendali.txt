@@ -1,0 +1,67 @@
+Control Flow / Struktur Kendali
+Adalah bagaimana alur dari program kita dibaca oleh interpreter PHP. Normalnya alur kita dibaca dari atas kebawah dan dari kiri kanan. Dengan Control Flow kita bisa mengatur alur pembacaan programnya. Control Flow ada 2 hal, Pengulangan & Pengkondisian/Pencabangan.
+
+1. Pengulangan
+Pengulangan adalah ketika kita ingin mengerjakan sebuah block program tanpa harus menulis ulang scriptnya.
+Pengulangan ada 3 bagian inisialisasi, kondisiterminasi & inkermen/dekermen.
+  - inisialisasi adalah kita menentukan variabel awal untuk pengulangannya.
+  - kondisiterminasi adalah digunakan untuk memberhentikan pengulangannya.
+  - inkermen atau dekermen adalah supaya pengulangannya bisa maju atau mundur.
+Ada beberapa syntax untuk pengulangan, yaitu:
+- for
+    Cara Penulisan:
+    for(inisialisasi; kondisiterminasi; inkermen/dekermen) {echo""}
+    Contoh Penulisan:
+    <?php for($i = 0; $i < 5; $i++) {echo "HelloWorld ";}?> //hasilnya HelloWorld HelloWorld HelloWorld HelloWorld HelloWorld
+
+- while(Boolean)
+ Akan mengecek terlebih dahulu, jika hasilnya true maka akan jalan. Tetapi jika hasilnya false tidak akan jalan.
+    Cara Penulisan:
+    inisialisasi; while(kondisiterminasi) {echo ""; inkermen/dekermen;}
+    Contoh Penulisan:
+    <?php $i = 0; while($i < 5) {echo "HelloDunia "; $i++;}?> //hasilnya HelloDunia HelloDunia HelloDunia HelloDunia HelloDunia
+
+- do while(do.. Bolean)
+Akan menjalankan dahulu sekali, karena diawali do. Lalu mengeceknya menggunakan while, jika hasil didalam while true maka akan jalan. Tapi jika hasil didalam while false tidak akan jalan lagi.
+    Cara Penulisan:
+    inisialisasi; do{echo ""; inkermen/dekermen;} while(kondisiterminasi)
+    Contoh Penulisan:
+    <?php $i = 0; do{echo "HaiWorld "; $i++;} while($i < 5)?> //hasilnya HaiWorld HaiWorld HaiWorld HaiWorld HaiWorld
+
+- foreach
+Pengulangan khusus array
+    foreach($namaVariabel as $namaVariabelYangNantinyaDigunakanUntukSatuan);
+
+
+2. Pengkondisian atau Pencabangan
+Ada beberapa syntax Pengkondisian atau Pencabangan, yaitu:
+- if else
+    Cara Penulisan:
+        $variabel = angka;
+        if($variabel syntax operator perbandingan angka) {echo "";}
+        else{echo"";}
+    Penjelasan:
+        jika if() benar, maka akan menjalankan {echo "";}
+        tapi jika if() salah, atau hasilnya selain dari if(), maka akan menjalankan else{echo "";}
+    Contoh Penulisan:
+        <?php $i = 20; if($i < 30) {echo "benar";} else{echo "salah";}?> //hasilnya benar
+        <?php $i = 50; if($i < 30) {echo "benar";} else{echo "salah";}?> //hasilnya salah
+
+- if elseif else
+    Cara Penulisan:
+        $variabel = angka;
+        if($variabel syntax operator perbandingan angka) {echo "1";}
+        elseif($variabel == angka) {echo "2";}
+        else{echo"3";}
+    Penjelasan:
+        jika if() benar, maka akan menjalankan {echo "1";}
+        jika nilai/angka $variabel sama seperti di elseif(), maka akan menjalankan {echo "2";}
+        dan jika if() salah, atau hasilnya selain dari if(), maka akan menjalankan else{echo "3";}
+    Contoh Penulisan:
+        <?php $i = 30; if($i < 30) {echo "benar";} elseif($i == 30) {echo "sama";} else{echo "salah";}?> //hasilnya sama
+
+- ternary
+Untuk mengganti if else yang sederhana.
+
+- switch
+Biasanya digunakan jika mempunyai if else yang sudah terlalu banyak, bisa diringkas menggunakan switch.

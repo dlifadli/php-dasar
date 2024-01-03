@@ -1,0 +1,21 @@
+PDF Reporting
+Adalah file dengan format php (.php) di ubah menjadi format pdf (.pdf)
+
+Manfaat Pdf Report:
+- Laporan
+- Kwitansi/invoice/faktur
+- Form isian
+- dll
+
+Membuat PDF
+1. Fitur bawaan browser
+
+2. Library PHP
+	- FPDF
+	- mPDF
+	- DOMPDF
+
+Cara menggunakan mpdf
+- install mpdf melalui https://mpdf.github.io
+- pastikan php lu versinya mendukung untuk install mpdfnya
+- install composer, karena mpdf official hanya dan bisa install menggunakan composer

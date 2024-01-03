@@ -1,0 +1,22 @@
+Composer
+getcomposer.org
+Adalah Dependency Manager Untuk PHP. Dengan kata lain, Composer adalah yang mengelola dependency. Composer sama seperti Bower, npm (node packages manager), yarn dan bundler. Library atau framework yang mempunyai kumpulan repositorynya adalah packagist.org
+
+Cara Instalasi Composer Menggunakan Windows
+- PHP Versi minimal 7.2.5
+- buka https://getcomposer.org/download/
+- lalu pilih Download and run Composer-Setup.exe
+- install Composer-Setup.exe
+- developer modenya di unchecklist -> pilih lokasi php.exe yang biasa kita pakai, jika menggunakan xampp. Pasti lokasi file php.exe nya didalam folder xampp. -> kosongkan proxy url -> install -> finish
+- untuk mengecek sudah diinstall composernya atau belum, atau untuk menggunakan composernya bisa menggunakan command prompt(cmd)
+- buka command prompt -> ketik composer -> enter
+
+Cara Penggunaan Composer
+- buka command prompt(cmd)
+- cari tempat mana yang nantinya untuk dijadikan penyimpanan package dari packagist.org nya
+	- cd/ -> d: -> D:\Software\xampp\htdocs\phpdasar\latihan23
+- lalu buka packagist.org pilih package mana yang ingin di install
+	- sebagai contoh, ini akan menginstall package dari fzaninotto/faker
+	- lalu copas ( composer require fzaninotto/faker ) yang ada di web packagist.org nya didalam cmd
+- tunggu instalasi packagenya, jika instalasi sudah berhasil maka file packagenya sudah otomatis berada di tempat penyimpanan kita
+- jika ingin menghapus packagenya, bisa kita langsung hapus file vendor, composer.json, dan composer.lock

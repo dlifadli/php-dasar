@@ -1,0 +1,15 @@
+ajax
+adalah sebuah teknik/metode request dan respon. Dan kepanjangan atau istilah ajax ini berasal dari: Asynchronous Javascript and XML. Untuk menggunakan metode ajax kita perlu sebuah objek yang ada didalam browser yaitu: XMLHttpRequest() objek ini yang akan mengelola request kita menggunakan teknik/metode ajax. Dan objek ini sudah ada di kebanyakan browser jaman sekarang.
+
+Metode Request dan Respon Dalam Web:
+- Synchronous
+adalah sebuah metode request dan respon dalam web yang jika kita merequest ke server akan merequest semua yang ada di web dan akan di respon oleh server dengan mengembalikan semua hal yang ada di webnya.
+
+- Asynchronous
+adalah sebuah metode request dan respon dalam web yang jika kita merequest beberapa hal dari web ke server dan server akan merespon dengan mengembalikan beberapa hal yang kita minta saja.
+
+Syarat untuk memahami konsep ajax dan mengimplementasikannya yaitu:
+- Javascript Dasar
+- DOM (Document Object Model) adalah untuk memanipulasi halaman html menggunakan javascript.
+
+ajax bisa menggunakan cara lama yaitu menggunakan XMLHttpRequest() di javascript. Dan ajax juga bisa tanpa XMLHttpRequest() dengan menggunakan jquery $('')

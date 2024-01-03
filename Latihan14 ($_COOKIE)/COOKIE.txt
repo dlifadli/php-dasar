@@ -1,0 +1,8 @@
+Cookie 
+Adalah sebenarnya sama seperti $_SESSION, tapi $_COOKIE informasinya disimpan di browser/client.
+
+Kegunaan Cookie
+- Mengenali User (Remember Me)
+- Shoping Cart
+- Personalisasi adalah akan menampilkan kontent/iklan yang serupa dan yang sering dikonsumsi user.
+

@@ -1,0 +1,2 @@
+Pagination
+Adalah sebuah teknik untuk membatasi data yang tampil dihalaman web kita, menjadi beberapa halaman.

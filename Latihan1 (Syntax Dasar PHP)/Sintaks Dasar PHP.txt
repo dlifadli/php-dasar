@@ -1,0 +1,106 @@
+Sintaks Dasar PHP
+- Tag Php
+    diawali <?php
+    diakhiri ?>
+    sintaks ditulis ditengah antara tag
+    baris/enter tidak berpengaruh terhadap bahasa PHP
+
+- Sintaks Komentar
+    // untuk 1 baris
+            contoh penulisan // teks
+    /* */ untuk beberapa baris, tulis teks didalam code.
+            contoh penulisan /* ini teks
+            ini juga teks */
+
+- Sintaks Output
+  - echo untuk mencetak tulisan, variabel dan lain sebagainya.
+        contoh penulisan <?php echo"teks";?> atau <?="teks";?>
+
+  - print sama seperti echo untuk mencetak tulisan, variabel dan lain sebagainya.
+        contoh penulisan <?php print"teks"; ?> atau <?="teks";?>
+
+  - print_r khusus untuk menampilkan array. 
+        contoh penulisan print_r($variabel);
+
+  - var_dump biasanya dipakai untuk melihat isi dari variabel. (boolean true/false)
+        contoh penulisan var_dump( 1 < 1 ); atau var_dump("1" < "1");
+  
+- Sintaks PHP & HTML
+  - Sintaks PHP bisa didalam HTML
+        contoh penulisan PHP didalam HTML:
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+            <meta charset="UTF-8">
+            <title>ini title</title>
+            </head>
+            <body>
+            <h1>Selamat <?php echo "Datang"; ?></h1>
+            <p1><?php echo "ini paragraf";?></p1>
+            </body>
+            </html>
+  - Sintaks HTML bisa didalam PHP
+        contoh penulisan HTML didalam PHP <?php echo "<h1>hallo</h1>";?>
+
+- Variabel dan Tipe Data
+    $variabel tidak boleh diawali dengan angka.
+        contoh penulisan (yang salah, diawali angka) $1variabel = "teks";
+    $variabel bisa hanya huruf atau ditambah angka selain diawal huruf atau hanya menggunakan angka.
+        contoh penulisan $abc = "teks"; atau $vari1abel1 = "teks"; atau $666 = "teks";
+    
+- Sintaks Operator Aritmatika
+    +, -, *, /, %
+        contoh penulisan
+        <?php $x = 10; $y = 5;
+        echo $x + $y;?>
+
+- Sintaks Operator Penggabung String "" / concatenation / concat
+    penggabungan antar code atau string atau variabel
+    .
+        contoh penulisan
+        <?php $nama_depan = "Fadli"; $nama_belakang = "Zuhri";
+        echo $nama_depan . $nama_belakang;?> atau
+        <?php $nama_depan = "Fadli"; $nama_belakang = "Zuhri";
+        echo $nama_depan . " " . $nama_belakang;?>
+
+- Sintaks Operator Assignment
+    bisa menggunakan Operator Aritmatika lalu menggabungkan tanpa menghilangkan variabel sebelumnya
+    =, +=, -=, *=, /=, %=, .=
+        contoh penulisan
+        <?php $x = 1; $x += 5; echo $x;?> //hasilnya 6
+        <?php $x = 1; $x -= 5; echo $x;?> //hasilnya -4
+        <?php $nama = "Fadli"; $nama .= " "; $nama .= "Zuhri"; echo $nama;?> //hasilnya Fadli Zuhri
+
+- Sintaks Operator Perbandingan
+    merupakan Boolean true/false dan TIDAK mengecek TIPE datanya, melainkan HASIL dari datanya
+    <, >, <=, >=, ==, !=
+        contoh penulisan
+        <?php var_dump ( 1 < 5 );?> //apakah 1 lebih kecil dari 5? hasilnya true
+        <?php var_dump ( 1 == "1" );?> //apakah 1 sama dengan "1"? hasilnya true
+        <?php var_dump ( 1 == 1 );?> //apakah 1 sama dengan 1? hasilnya true
+        <?php var_dump ( 1 > 5 );?> //apakah 1 lebih besar dari 5? hasilnya false
+
+- Sintaks Operator Identitas 
+    merupakan Boolean true/false dan TIDAK mengecek HASIL dari datanya, melainkan TIPE datanya
+    ===, !==
+        contoh penulisan
+        <?php var_dump ( 1 === "1" );?> //apakah 1 sama dengan "1"? hasilnya false
+        <?php var_dump ( "1" === "1" );?> //apakah "1" sama dengan "1"? hasilnya true
+
+- Operator Logika 
+    merupakan Boolean true/false
+    &&, ||, !
+        &&
+        Jika hasil keduanya bernilai true, maka hasilnya true.
+        Tapi jika SALAH SATU dari keduanya HANYA bernilai true, maka hasilnya false.
+            contoh penulisan
+            <?php $x = 10;
+            var_dump($x < 20 && $x % 2 == 0);?> //apakah $x lebih kecil dari 20? true dan apakah $x jika dibagi 2 hasilnya 0? true. maka hasil dari &&nya true.
+            <?php $x = 30;
+            var_dump($x < 20 && $x % 2 == 0);?> //apakah $x lebih kecil dari 20? false dan apakah $x jika dibagi 2 hasilnya 0? true. maka hasil dari &&nya false.
+        
+        ||
+        Jika SALAH SATU dari keduanya HANYA bernilai true, maka hasilnya true.
+            contoh penulisan
+            <?php $x = 30;
+            var_dump($x < 20 || $x % 2 == 0);?> //apakah $x lebih kecil dari 20? false dan $x jika dibagi 2 hasilnya 0? true. maka hasil dari ||nya true.

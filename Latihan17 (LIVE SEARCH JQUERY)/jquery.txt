@@ -1,0 +1,9 @@
+jquery harus di install dahulu lewat jquery.com
+
+setelah didownload jika muncul script, pencet di save dengan cara ctrl + s
+
+cara mengaktifkan jquery 
+<script src="js/jquery-3.7.1.min.js"></script>
+Lalu
+<script src="js/script.js"></script>
+Difile script.js nya jika ingin memanggil jquery harus awali $('') atau jquery('')

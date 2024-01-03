@@ -1,0 +1,82 @@
+Function
+Adalah sebuah Sub-program yang dapat 'dipanggil' di bagian lain pada program.
+Disebut juga sebagai prosedur(kumpulan statement untuk melakukan tugas atau menghitung sebuah nilai). 
+Untuk menggunakan function, kita harus memanggil function tersebut atau membuat functionnya lalu memanggilnya.
+
+Kenapa harus menggunakan function?
+    - Reusability (DRY: Do not Repeat Yourself).
+    - Dekomposisi/Absraksi, untuk menyembunyikan kompleksitas dari program yang kita buat.
+    - Modularitas, untuk memudahkan kita jika terjadinya error pada saat debugging. Karena sudah kita buat menjadi sub-program.
+
+Kategori function
+    - Built-in Function, function yang sudah tersedia.
+    - User-Defined Function, function yang kita buat sendiri.
+
+Cara penggunaan function
+- Built-in Function
+Sebenarnya functions yang sudah tersedia dari PHP banyak sekali, bisa dilihat di http://php.net/manual/en/funcref.php
+dan ada beberapa function yang sering digunakan, yaitu.
+    - date
+        Penjelasan:
+            date("l"); untuk hari
+            date("d"); untuk tanggal
+            date("M"); untuk bulan dalam bentuk huruf
+            date("m"); untuk bulan dalam bentuk angka
+            date("Y"); untuk tahun
+            atau lebih lengkap formatnya bisa dilihat di http://php.net/manual/en/function.date.php
+        Cara Penulisan:
+            date("format")
+        Contoh Penulisan:
+            <?php echo date("l, d-M-Y");?> //hasilnya Monday, 18-Dec-2023
+            <?php echo date("l d M Y");?> //hasilnya Monday 18 Dec 2023
+
+    - time
+        Penjelasan:
+            time() merupakan hitungan detik dari 1 Januari 1970 (UNIX Timestamp atau EPOCH Time) sampai sekarang.
+        Cara Penulisan:
+            time(); atau date("format"), time()syntax operator aritmatika angka);
+        Contoh Penulisan:
+            <?php echo time();?> //hasilnya detik dari waktu UNIX Timestamp atau EPOCH Time hingga sekarang
+            <?php echo date("l d M Y", time()+60*60*24*100);?> //hasilnya merupakan hari tanggal bulan tahun sekarang ditambah 60detik dikali 60menit dikali 24jam dikali 100hari
+
+    - mktime
+        Penjelasan:
+            mktime(0,0,0,0,0,0) merupakan untuk membuat sendiri waktu dalam 6 parameter.
+            Dimulai dari jam,menit,detik,bulan,tanggal,tahun.
+        Cara Penulisan:
+            mktime(jam,menit,detik,bulan,tanggal,tahun)
+        Contoh Penulisan:
+            <?php echo mktime(0,0,0,8,9,2002)?> //hasilnya detik dari waktu tersebut hingga sekarang
+            <?php echo date("l", mktime(0,0,0,8,9,2002))?> //hasilnya friday
+
+    - strtotime(string)
+        Penjelasan:
+            strtotime("tanggal bulan tahun") merupakan kebalikannya dari mktime(0,0,0,0,0,0) tetapi ini menggunakan string.
+        Cara Penulisan:
+            strtotime("tanggal bulan tahun")
+        Contoh Penulisan:
+            <?php echo strtotime("09 aug 2002")?> //hasilnya detik dari waktu tersebut hingga sekarang
+            <?php echo date("l", strtotime("09 aug 2002"))?> //hasilnya friday
+            <?php echo date("l", strtotime("09 august 2002"))?> //hasilnya friday
+
+- User-Defined Function
+    Penjelasan:
+        functions yang kita buat sendiri.
+    Cara Penulisan:
+        membuat functionnya
+            function namaFunctionnya($parameter) {return "$parameter";}
+        memanggil functionnya
+            namaFunctionnya("argument");
+        TIPS:
+            Pada saat mengisi BEBERAPA $parameter, harus diperhatikan juga untuk mengisi BEBERAPA "argument"nya DENGAN TEPAT.
+            Atau bisa juga mengisi "argument" dengan $parameter yang default.
+    Contoh Penulisan:
+        Contoh 1 $parameter dan 1 "argument"
+            <?php function salam($nama) {return "Selamat Datang, $nama!";}
+            echo salam("Fadli");?> //hasilnya Selamat Datang, Fadli!
+        Contoh 2 $parameter dan 2 "argument"
+            <?php function salam($waktu, $nama) {return "Selamat $waktu, $nama!";}
+            echo salam("Malam", "Fadli");?> //hasilnya Selamat Malam, Fadli!
+        Contoh $parameter default
+            <?php function salam($waktu = "Datang", $nama = "Admin") {return "Selamat $waktu, $nama!";}
+            echo salam();?> //hasilnya Selamat Datang, Admin!
