@@ -1,0 +1,23 @@
+1. Sejarah PHP
+Dibuat oleh Rasmus Lerdorf pada tahun 1994, awalnya dia tidak bermaksud membuat bahasa pemprograman, tapi dia ingin mengelola halaman web pribadinya (Personal Home Page = PHP).
+- PHP/FI (Personal Home Page/ Form Interpreter) 1994
+- PHP Tools v.1 Open Source tahun 1995
+- PHP Tools v.2 Open Source tahun 1997 sudah mulai banyak yang mengembangkan
+- PHP 3 tahun 1998 ada 2 orang yang membantu mengembangkan yaitu, Zeev Suraski & Andi Gutmans. 2 orang ini membuat Zend Technologies. Zeev Suraski & Andi Gutmans yang membuat parser/program untuk membaca syntaks dalam php. PHP: Hypertext Preprocessor
+- PHP 4 tahun 2000 sudah ada Zend Engine diciptakan oleh Zend Technologies
+- PHP 5 tahun 2004 adalah updatean PHP paling besar, ada fitur: Zend Engine 2, Object Oriented Programming (OOP) & PHP Data Object (PDO)
+- PHP 4 pada tahun 2008 berhenti dikembangkan karena ada Gerakan GoPHP5
+- PHP 6 ditunda, sampai akhirnya diabaikan. Serta ada masalah unicode sehingga hanya fokus ke PHP5.4 tahun 2010
+- PHP 7 tahun 2014 Zend Engine 3.
+Sebetulkan PHP mempunyai ikon/maskot yaitu elePHPant(Gajah) diciptakan oleh Vincent Pontier 
+
+2. Karakteristik bahasa PHP
+- ekstensi file
+  - .php
+- setiap syntaks ditulis didalam tag/delimiter/pembatas php
+  - diawali dengan <?php
+  - diakhiri dengan ?>
+- bisa digunakan bersamaan dengan HTML
+  - bisa digunakan didalam HTML
+  - bisa digunakan didalam PHP
+- mengikuti bahasa C

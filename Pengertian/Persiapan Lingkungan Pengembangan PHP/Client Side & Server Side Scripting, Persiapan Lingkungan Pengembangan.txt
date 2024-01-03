@@ -1,0 +1,20 @@
+1. Pengertian Client Side & Server Side Scripting
+- Client Side Processing adalah ketika kita membuat website menggunakan HTML, CSS & Javascript. Karena semua pemprosesannya dilakukan disisi Client/di pc sendiri.
+- Server Side Scripting adalah ketika kita membuka website lewat browser, browser akan mengirimkan sebuah request ke web server. Karena pemprosesannya tidak hanya disisi client, tetapi juga disisi server. Ini karena ada bahasa pemprograman/script yang berjalan di server yaitu PHP/ASP/Ruby/Phyton, setelah web server membaca script lalu akan mengirimkan menjadi HTML ke web browser. Dan script/bahasa pemprograman yang tadi bisa terhubung ke database.
+  - Web Browser (Client Side Processing) = HTML, CSS & Javascript
+  - Web Server = Apache, IIS, nginx, tomcat, lighttpd dan lain lain
+  - Script Execution/bahasa pemprograman = PHP, ASP, Ruby & Phyton
+  - Database = MySQL, MariaDB, SQL Server, Oracle, PostgreSQL dan lain lain
+
+2. Persiapan lingkungan pengembangan
+- install Web Server
+  - Apache http://httpd.apache.org/download.cgi
+- install Bahasa Pemprograman
+  - PHP http://www.php.net/downloads.php
+- install Database
+  - MySQL https://dev.mysql.com/downloads/
+- Jika tidak ingin menginstall satu persatu, bisa kita gunakan sebuah software All-In-One Packages atau sebuah bundle yang sudah tersedia semuanya.
+  - WAMP (Windows Apache MySQL PHP) http://www.wampserver.com/en
+  - MAMP(Mac Apache MySQL PHP) https://www.mamp.info/en/
+  - LAMP(Linux Apache MySQL PHP)
+  - XAMPP (X = Lintas sistem operasi/ada disemua sistem operasi, Apache, MariaDB/MySQL, PHP & Perl) https://apachefriends.org/download.html
